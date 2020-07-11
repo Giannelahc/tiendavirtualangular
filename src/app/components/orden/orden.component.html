@@ -1,0 +1,34 @@
+<div *ngIf="status">Se creó la orden correctamente</div>
+<div class="container" *ngIf="order">
+
+    <div class="card-header bg-info text-white">
+        <h2>{{title}}</h2>
+    </div>
+
+    <div class="card-body">
+        
+
+        <form #formProject="ngForm" (ngSubmit)="onSubmit(formProject)">
+        <table class="table table-hover">
+            <thead>
+                <th>
+                    Dirección de cliente
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dirección de cliente</td>
+                    <td><input type="text" name="address" #name="ngModel" [(ngModel)]="order.address"><br></td>
+                    <td><input type="submit" class="btn btn-danger" value="Crear"></td>
+                </tr>
+                <tr>
+                    <td>Seleccione producto: </td>
+                    <td><input type="radio" name="orderitem.price" value= "125"> Reloj Precio: 125
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+
+</div>
