@@ -28,7 +28,7 @@ export class OrdenComponent implements OnInit {
   }
 
   onSubmit(formu){
-    this.order.orderItems = this.orderitem;
+    this.order.orderItems = [this.orderitem];
     this.orderService.saveProject(this.order).subscribe(
       response => {
         console.log(response);

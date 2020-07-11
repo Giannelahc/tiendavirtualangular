@@ -6,5 +6,5 @@ export class Order {
     amount : number;
     courier : string;
     discount : number;c
-    orderItems : OrderItemInternet;
+    orderItems : Array<OrderItemInternet>;
 }
